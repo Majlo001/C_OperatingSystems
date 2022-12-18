@@ -1,7 +1,3 @@
-// SO IS1 220B LAB09
-// Miłosz Szczepanik
-// sm51115@zut.edu.pl
-
 #include <windows.h>
 #include <stdio.h>
 #include <stdlib.h>
