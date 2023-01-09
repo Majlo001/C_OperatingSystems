@@ -23,14 +23,14 @@ DWORD WINAPI thread(LPVOID data) {
 
 	DWORD self = GetCurrentThreadId();
 	srand(self);
-
-	WaitForSingleObject(mutex, INFINITE);
 	double val = 0.0, temp;
 	for (double i = ti->first; i <= (ti->first + ti->n); i++) {
 		temp = (double)pow(-1, i)/ (double)(2*i + 1);
 		val += temp;
 	}
 	//fprintf(stdout, "%d %d %f\n", ti->first, ti->n, val);
+
+	WaitForSingleObject(mutex, INFINITE);
 	ti->retval = val;
 	ReleaseMutex(mutex);
 	return 0;
